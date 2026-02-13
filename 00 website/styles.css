@@ -1,27 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    background-color: #fff;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+/* Fixed panels */
+.fixed-panel {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     padding: 40px;
-    background-color: #ffffff;
 }
 
-h1 {
-    font-size: 1rem;
+.left-panel {
+    left: 0;
+    width: 45vw;
+    gap: 20px;
+}
+
+.right-panel {
+    right: 0;
+    width: 45vw;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+/* Random text */
+.random-text {
+    font-size: 2rem;
+    line-height: 1;
+    width: 100%;
     color: #000;
-    font-weight: normal;
 }
 
-h2 {
+/* Clocks */
+.clocks-container {
+    width: 100%;
+}
+
+.clocks {
+    width: 120%;
+    height: auto;
+}
+
+/* Placeholder image */
+.placeholder-image {
+    text-align: center;
+    width: 100%;
+}
+
+.placeholder-image svg {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+}
+
+.placeholder-label {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Scrollable container for are.na blocks */
+.scrollable-container {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    height: 55vh;
+    white-space: nowrap;
+    padding-left: 350px;
+    padding-right: 450px;
+    overflow: visible;
+}
+
+/* Are.na blocks */
+.arena-block {
+    position: absolute;
+    display: inline-block;
+    width: 320px;
+    max-height: 400px;
+    background: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: z-index 0s;
+}
+
+.arena-block:hover {
+    z-index: 999 !important;
+}
+
+.arena-block img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.arena-block .text-content {
+    padding: 20px;
     font-size: 1rem;
+    line-height: 1.5;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    padding: 30px;
+}
+
+.arena-block .pdf-content {
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.arena-block .pdf-content a {
     color: #000;
-    margin-top: 4rem;
-    font-weight: normal;
+    text-decoration: underline;
 }
 
-p {
+/* Loading state */
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 1rem;
-}
-
-#social {
-    padding-top: 4rem;
+    z-index: 1000;
 }

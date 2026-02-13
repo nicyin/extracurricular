@@ -8,15 +8,53 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Left fixed panel: Random text + Clocks -->
+    <div class="fixed-panel left-panel">
+        <div class="random-text" id="randomText"></div>
+        <div class="clocks-container">
+            <svg class="clocks" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Left clock (Berlin) -->
+                <g id="berlinClock" transform="translate(100, 100)">
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2"/>
+                    <line id="berlinHour" x1="0" y1="0" x2="0" y2="-40" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <line id="berlinMinute" x1="0" y1="0" x2="0" y2="-65" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                </g>
+                <!-- Right clock (Taipei) -->
+                <g id="taipeiClock" transform="translate(200, 100)">
+                    <circle cx="0" cy="0" r="80" fill="none" stroke="black" stroke-width="2"/>
+                    <line id="taipeiHour" x1="0" y1="0" x2="0" y2="-40" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <line id="taipeiMinute" x1="0" y1="0" x2="0" y2="-65" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                </g>
+                <!-- Labels -->
+                <text x="100" y="195" text-anchor="middle" font-size="12" font-family="Arial, sans-serif">BERLIN</text>
+                <text x="200" y="195" text-anchor="middle" font-size="12" font-family="Arial, sans-serif">TAIPEI</text>
+            </svg>
+        </div>
+    </div>
 
-    <h1>EXTRACURRICULAR PROJECTS</h1>
-    <p>Stephanie Marie Cedeño & Nicci Yin</p>
-    <h2>ASSIGNMENTS</h2>
-    <p>no. 1 - <a href="https://www.are.na/editorial/category/are-na-annual" target=_blank>Are.na Annual 2026: <a href="http://are.na/stephanie-marie-cedeno/reflection-pools">Reflections</a></p>
-    <p>no. 2 - Epistolary Collaborations</p>
-    <p>no. 3 - Not enough time</p>
-    <div id="social"><a href="http://instagram.com/extraextracurricular" target=_blank>@extraextracurricular</a></p>
+    <!-- Scrollable area for are.na blocks -->
+    <div class="scrollable-container" id="arenaContainer">
+        <!-- Are.na blocks will be dynamically inserted here -->
+    </div>
 
+    <!-- Right fixed panel: Placeholder image -->
+    <div class="fixed-panel right-panel">
+        <div class="placeholder-image">
+            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                <!-- Placeholder flower/circular pattern from sketch -->
+                <circle cx="150" cy="150" r="40" fill="none" stroke="black" stroke-width="2"/>
+                <circle cx="150" cy="90" r="40" fill="none" stroke="black" stroke-width="2"/>
+                <circle cx="210" cy="120" r="40" fill="none" stroke="black" stroke-width="2"/>
+                <circle cx="210" cy="180" r="40" fill="none" stroke="black" stroke-width="2"/>
+                <circle cx="150" cy="210" r="40" fill="none" stroke="black" stroke-width="2"/>
+                <circle cx="90" cy="180" r="40" fill="none" stroke="black" stroke-width="2"/>
+                <circle cx="90" cy="120" r="40" fill="none" stroke="black" stroke-width="2"/>
+                <circle cx="190" cy="150" r="40" fill="none" stroke="black" stroke-width="2"/>
+            </svg>
+            <p class="placeholder-label">Fig. 4a</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
